@@ -1,0 +1,30 @@
+/* pages/order/order.wxss */
+
+.list_container {
+  font-size: 18px;
+  background-color: #fff;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.list_item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #e8e8e8;
+  justify-content: space-between;
+  white-space: nowrap;
+}
+
+image {
+  width: 20px;
+  height: 20px;
+}
+.img_company_icon{
+  width: 60px;
+  height: 60px;
+}
+.img_icon_s{
+  width: 10px;
+  height:15px;
+}
+

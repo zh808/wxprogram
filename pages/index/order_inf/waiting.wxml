@@ -1,0 +1,26 @@
+<!--pages/index/order_inf/waiting.wxml-->
+<view class='MyContainer'>
+  <view class='line'>
+    <view class='imgLoc'>
+      <image src='../../../images/icons/ping.png' />
+    </view>
+    <view class='textLoc'>
+      <view class='line font_ss color_gray' style='padding:5px;'>
+        <text>张三/1333333333</text>
+      </view>
+      <view class='line font_s'>
+        <image class='img_icon_s' src='../../../images/icons/place_start.png'></image>
+        <text>杭州华科科技园</text>
+      </view>
+      <view class='line font_s'>
+        <image class='img_icon_s' src='../../../images/icons/place_end.png'></image>
+        <text>杭州下沙科技园</text>
+      </view>
+    </view>
+  </view>
+
+<view class='line operating_area space_between'>
+   <view style='width:80%;'> <text class='font_ss color_gray '>下单时间：ss</text></view>
+    <button size='mini'  class='button_s' bindtap='fn_got'>删除</button>
+</view>
+</view>

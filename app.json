@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index/index",
+    "pages/center/me/me",
+    "pages/center/meyundan/meyundan",
+    "pages/center/manage/manage",
+    "pages/center/me_site/me_site",
+    "pages/order/writeAddress/writeAddress",
+    "pages/index/order_inf/picking",
+    "pages/index/order_inf/waiting",
+    "pages/order/order/order",
+    "pages/Q&A/Q&A",
+    "pages/order/makeOrder/makeOrder",
+    "pages/order/addressBook/addressBook",
+    "pages/order/confirmOrder/confirmOrder"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "海陆空",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index/index",
+        "text": "海陆空",
+        "iconPath": "./images/icons/hailukong.png",
+        "selectedIconPath": "./images/icons/hailukong_s.png"
+      },
+      {
+        "pagePath": "pages/order/order/order",
+        "text": "下单",
+        "iconPath": "./images/icons/order.png",
+        "selectedIconPath": "./images/icons/order_s.png"
+      },
+      {
+        "pagePath": "pages/Q&A/Q&A",
+        "text": "问答 ",
+        "iconPath": "./images/icons/Q&A.png",
+        "selectedIconPath": "./images/icons/Q&A_s.png"
+      },
+      {
+        "pagePath": "pages/center/me/me",
+        "text": "个人",
+        "iconPath": "./images/icons/my.png",
+        "selectedIconPath": "./images/icons/my_s.png"
+      }
+    ]
+  }
+}

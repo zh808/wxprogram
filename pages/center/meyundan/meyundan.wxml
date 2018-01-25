@@ -1,0 +1,58 @@
+<!--pages/meyuandan/meyundan.wxml-->
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+<view hidden="{{currentTab!==0}}">
+  <view class='kong'>
+    <view class='kong_tupian'>
+      <image class='tupian' src='../../../images/icons/kong.png'></image>
+      <view>
+        亲，还没订单信息哦，快去下单吧~
+        <button class='btn'>前往下单</button>
+      </view>
+    </view>
+  </view>
+</view>
+
+ <view class='waitingUp'>
+  <image class='photoPin' src='../../../images/icons/kong.png'></image>
+  <view>
+    <view class='huoche'>
+      <text class='info0'>4.2米中型货车</text>
+    </view>
+    <image class='origin' src='../../../images/icons/origin.png'></image>
+    <text class='info' decode='true'>&nbsp;&nbsp;杭州华业高科技软件园</text>
+    <view>
+      <image class='origin' src='../../../images/icons/origin.png'></image>
+      <text class='info' decode='true'>&nbsp;&nbsp;杭州下沙工业区</text>
+    </view>
+  </view>
+  <view>
+  </view>
+  <view class='waitingdown'>
+    <rich-text nodes="<hr>"></rich-text>
+    <text class='info1'>待接单</text>
+    <button class='shanchu'>删除</button>
+  </view>
+</view> 
+
+
+
+
+
+
+
+
+
+<view hidden="{{currentTab!==1}}">
+
+</view>
+<view hidden="{{currentTab!==2}}">
+
+</view>
+<view hidden="{{currentTab!==3}}">
+
+</view>
+<view hidden="{{currentTab!==4}}">
+
+</view>

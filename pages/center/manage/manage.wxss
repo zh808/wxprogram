@@ -1,0 +1,17 @@
+/* pages/manage/manage.wxss */
+.site {
+  border-radius: 10rpx;
+  background-color: white;
+  margin: 20rpx;
+  padding: 20rpx;
+  height: 120rpx;
+}
+
+.Contact {
+  float: left;
+  margin-top: 20rpx;
+}
+
+.location {
+  margin-top: 200rpx;
+}

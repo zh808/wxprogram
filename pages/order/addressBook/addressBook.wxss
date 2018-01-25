@@ -1,0 +1,25 @@
+/* pages/order/sender/sender.wxss */
+
+.list_item {
+  padding: 10px;
+  margin: 10px;
+  background-color: #fff;
+}
+
+.list_item_name {
+  font-size: 18px;
+}
+
+.list_item_defaultAddress {
+  background-color: #28b6ff;
+  color:#fff;
+  font-size:12px;
+  border-radius: 5px;
+  padding: 4px;
+  float: right;
+}
+.list_item_address{
+  padding: 5px 0 5px 0;
+  font-size: 14px;
+  color: #888888;
+}

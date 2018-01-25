@@ -1,0 +1,10 @@
+/* pages/Q&A/Q&A.wxss */
+.topLine{width: 50%;text-align: center;padding: 10px;}
+.active{border-bottom: 5rpx solid #28b6ff;}
+.selected{background-color: #28b6ff;}
+.question_type{margin:5px;padding:5px;width: 16%;text-align: center;border:1rpx solid #d9d9d9;border-radius: 5px; }
+.question_area{margin: 10px;padding:10px;background-color: #fff;border-radius: 5px;}
+.write_question{margin:10px;width: 95%; height: 250rpx; }
+image{padding:20rpx;width: 150rpx;height: 150rpx;}
+.img_s{padding:20rpx;width: 60rpx;height: 60rpx;}
+.text_area{width:80%;}
