@@ -47,6 +47,7 @@ App({
     wx.request({
       url: this.globalData.root_url + '/admin-ssm/shipperMain/getWaybill.do?shipper=00151597927708513079',
       method: "GET",
+      //data: this.globalData.shipper,
       success: res=> {
         console.log(res)
         this.globalData.waiting = res.data.wait
@@ -60,6 +61,7 @@ App({
     root_url: 'http://120.78.83.191',
     appid: 'wxf5201d310eaa1f64',
     secret:'689472891e055248873095ad377794cc',
-    openid:null
+    openid:null,
+   // shipper:"00151597927708513079"
   }
 })

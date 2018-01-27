@@ -48,8 +48,8 @@
   </view></view>
 
 <view class='price'>
-  <text style='font-size:20px;'>总计：</text>
-  <text style='font-size:20px;color:red;'>￥{{order_inf.real_money}}元</text>
+  <text style='font-size:36rpx;'>总计：</text>
+  <text style='font-size:36rpx;color:red;'>￥{{order_inf.real_money}}元</text>
 </view>
 
   <view class='confirm'>立即支付</view>

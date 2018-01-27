@@ -14,6 +14,14 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+function cancel_order(waybill_id){
+  wx.request({
+    url: getApp().globalData.root_url + '/admin-ssm/shipperMain/updatePayStatus.do?waybill_id' + waybill_id,
+    success: res => { console.log(res) }
+  })
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  cancel_order: cancel_order
 }

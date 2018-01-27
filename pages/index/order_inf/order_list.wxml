@@ -19,7 +19,7 @@
     <view style='width:70%;'>
       <text class='font_ss color_gray '>下单时间：{{item.begin_time}}</text>
     </view>
-    <button class='button_s font_ss' bindtap='delete_order'>删除订单</button>
+    <button class='button_s font_ss' bindtap='cancel_order' data-waybill_id='{{item.waybill_id}}'>删除订单</button>
   </view>
 <view wx:if='{{order_status==1}}' class='line operating_area space_between'>
     <view style='width:70%;'>

@@ -34,9 +34,9 @@
     <view class="qc-v-center float-left" wx:if='{{get_type=="shop"}}'>
       <image src="/images/icons/my.png" class='qc-avatar '></image>
     </view>
-    <view class="qc-v-center float-left"  wx:else>
-        <image src="/images/icons/time.png" class='qc-avatar '></image>
-      </view>
+    <view class="qc-v-center float-left" wx:else>
+      <image src="/images/icons/time.png" class='qc-avatar '></image>
+    </view>
     <!-- 文字  -->
     <view class=' qc-v-center float-left'>
       <view class='qc-text-width' wx:if='{{detail.type=="shop"}}'>门店发货</view>
@@ -95,6 +95,11 @@
   </view>
 </view>
 <view wx:if='{{status_waiting}}' class='button-container '>
-<text>已付运费　</text><text style='color:red;'>￥{{detail.real_money}}</text>
-<button>退款</button>
+  <view style='display:flex;'>
+    <text>已付运费　</text>
+    <text style='color:red;'>￥{{detail.real_money}}</text>
+  </view>
+  <view style='display:flex;justify-content: flex-end;'>
+    <button size='mini' bindtap='cancel_order'>退款</button>
+  </view>
 </view>

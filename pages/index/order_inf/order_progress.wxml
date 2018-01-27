@@ -13,7 +13,7 @@
       <view>{{detail.carrier_phone}}</view>
     </view>
   </view>
-  <image class='icon' src='/images/icons/call.png' />
+  <image bindtap='call' data-carrier_phone='{{detail.carrier_phone}}' class='icon' src='/images/icons/call.png' />
 </view>
 <view class='MyContainer'>
   <view wx:if='{{status==2}}' class='line'>

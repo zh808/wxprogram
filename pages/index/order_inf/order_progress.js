@@ -5,81 +5,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    detail: {
-avatar
-    :
-    "http://img4.imgtn.bdimg.com/it/u=105283187,2954621639&fm=27&gp=0.jpg",
-begin_time
-    :
-    "2018-01-16 14:49:53",
-carrier
-    :
-    "151583295083959452",
-carrier_avatar
-    :
-    "http://img4.imgtn.bdimg.com/it/u=105283187,2954621639&fm=27&gp=0.jpg",
-carrier_license_plate
-    :
-    "京A88888",
-carrier_name
-    :
-    "张三-open",
-carrier_phone
-    :
-    18888888888,
-count
-    :
-    4,
-description
-    :
-    "描述。。18",
-get_type
-    :
-    "take",
-line_id
-    :
-    "201700100003",
-origin
-    :
-    "湖北省武汉市江岸区五福路82号5楼1号",
-pay_status
-    :
-    "2",
-pay_way
-    :
-    "2",
-real_money
-    :
-    80,
-receive_time
-    :
-    "2018-01-26 21:15:36",
-receiver_name
-    :
-    "王浩",
-receiver_phone
-    :
-    15551350991,
-shipper_name
-    :
-    "查婷婷",
-shipper_phone
-    :
-    "18855162760",
-terminus
-    :
-    "安徽省凤阳县红心镇乌罗村罗东队26号",
-truck_desc
-    :
-    "拖拉机型",
-volume
-    :
-    "小件",
-waybill_id
-    :
-    "151583386203782593"}
+
   },
 
+call:function(e){
+  console.log(e)
+wx.makePhoneCall({
+  phoneNumber:String(e.currentTarget.dataset.carrier_phone),
+})
+},
   /**
    * 生命周期函数--监听页面加载
    */

@@ -1,4 +1,5 @@
 // pages/index/order_inf/waiting.js
+var util = require('../../../utils/util.js')
 Page({
 
   /**
@@ -12,7 +13,22 @@ Page({
     ]
   },
 
+  cancel_order: function (e) {
+    var that = this
+    wx.showModal({
+      title: '提示',
+      content: '正在寻找司机，您确定取消该订单？',
+      success: function (res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+          util.cancel_order(e.currentTarget.dataset.waybill_id)
+        } else {
+          console.log('用户点击取消')
+        }
 
+      }
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载

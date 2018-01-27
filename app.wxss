@@ -10,6 +10,7 @@ text {white-space: nowrap;}
 .wrap{flex-wrap: wrap;}
 /* 字体  */
 .font_m {font-size: 40rpx;}
+.font_mm{font-size: 36rpx;}
 .font_s {font-size: 30rpx;}
 .font_ss {font-size: 25rpx;}
 /* 灰色  */
@@ -34,6 +35,6 @@ text {white-space: nowrap;}
 .confirm {height: 45px;margin: 40px 20px 0 20px;background-color: #28b6ff;
  display: flex;align-items: center;justify-content: center;color: white; border-radius: 30px;}
 /* 页面顶部  */
-.front {padding: 5px;background-color: #eae1e1;color: #999;text-align: center;font-size: 14rpx;
+.front {padding: 5px;background-color: #eae1e1;color: #999;text-align: center;font-size: 30rpx;
   font-family: 'Times New Roman', Times, serif;}
 .backgroundcolor_gray{background-color: #e8e8e8;}
