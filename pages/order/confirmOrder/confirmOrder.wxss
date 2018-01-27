@@ -1,0 +1,27 @@
+/* pages/order/confirmOrder/confirmOrder.wxss */
+
+.MyContainer {
+  font-size: 14px;
+}
+
+.view_part {
+  padding: 5px 0 5px 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.view_demo {
+  display: flex;
+  padding: 5px;
+}
+
+.demo_intro {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  color: #838b83;
+}
+
+.price {
+  text-align: center;
+  margin: 30px 0 30px 0;
+}

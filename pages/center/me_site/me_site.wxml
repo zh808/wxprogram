@@ -1,0 +1,26 @@
+<!--pages/me_site/me_site.wxml-->
+<view class='kong'>
+  <view class='kong_contact'>
+    <image class='contact' src='../../../images/icons/no_contact.png'></image>
+    <view>
+      亲，还没联系人信息哦，赶快添加联系人吧~
+      <button class='btn'>添加联系人</button>
+    </view>
+  </view>
+</view>
+<view class='site'>
+  <text class='Contact'>李四    13865237851</text>
+  <text class='location'>浙江省杭州市下沙区鑫鑫大厦12楼</text>
+</view>
+<view class='site'>
+  <text class='Contact'>李四    13865237851</text>
+  <text class='location'>浙江省杭州市下沙区鑫鑫大厦12楼</text>
+</view>
+<view class='site'>
+  <text class='Contact'>李四    13865237851</text>
+  <text class='location'>浙江省杭州市下沙区鑫鑫大厦12楼</text>
+</view> 
+<view class='zongti'>
+<button class='guanli' bindtap='toast'>管理</button>
+<button class='tianjia'>添加联系人</button>
+</view>

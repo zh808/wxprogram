@@ -1,0 +1,63 @@
+/* pages/me_site/me_site.wxss */
+
+.kong {
+  display: none;
+  justify-content: space-between;
+  padding: 120px 0 10px 0;
+}
+
+.kong_contact {
+  width: 100%;
+  text-align: center;
+}
+
+.contact {
+  width: 120px;
+  height: 90px;
+  padding-bottom: 90px;
+}
+
+.btn {
+  height: 45px;
+  margin: 48px 20px 0 20px;
+  background-color: #28b6ff;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 30px;
+}
+
+.site {
+  border-radius: 10rpx;
+  background-color: white;
+  margin: 20rpx;
+  padding: 20rpx;
+  height: 120rpx;
+}
+
+.Contact {
+  float: left;
+  margin-top: 20rpx;
+}
+
+.location {
+  margin-top: 200rpx;
+}
+
+.zongti {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  right: -11rpx;
+}
+
+.guanli {
+  width: 50%;
+  background-color: #57D1FF;
+}
+
+.tianjia {
+  width: 50%;
+  background-color: #28B6FF;
+}

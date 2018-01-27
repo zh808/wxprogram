@@ -1,0 +1,105 @@
+/* pages/meyuandan/meyundan.wxss */
+
+.navbar {
+  flex: none;
+  display: flex;
+  background: #fff;
+}
+
+.navbar .item {
+  position: relative;
+  flex: auto;
+  text-align: center;
+  line-height: 95rpx;
+}
+
+.navbar .item.active {  
+  color: #28b6fe;
+}
+
+.navbar .item.active:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3rpx;
+  background: #28b6fe;
+}
+
+.kong {
+  display: none;
+  justify-content: space-between;
+  padding: 120px 0 10px 0;
+}
+
+.kong_tupian {
+  width: 100%;
+  text-align: center;
+}
+
+.tupian {
+  width: 80px;
+  height: 130px; 
+  padding-bottom: 50px;
+}
+
+.btn {
+  height: 45px;
+  margin: 48px 20px 0 20px;
+  background-color: #28b6ff;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 30px;
+}
+
+.waitingUp {
+  /* border: 1px solid red; */
+  background-color: white;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  border-radius: 20rpx;
+}
+
+.photoPin {
+  width: 100rpx;
+  height: 170rpx;
+  float: left;
+}
+
+.huoche {
+  text-align: left;
+}
+
+.origin {
+  width: 30rpx;
+  height: 50rpx;
+  vertical-align: middle;
+}
+
+.info {
+  font-size: 15px;
+}
+
+.info0 {
+  font-size: 15px;
+}
+
+.shanchu {
+  line-height: 25px;
+  width: 80px;
+  float: right;
+}
+
+.waitingdown {
+  margin-top: 20rpx;
+}
+

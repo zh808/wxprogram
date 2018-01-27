@@ -1,0 +1,5 @@
+<!--pages/manage/manage.wxml-->
+<view class='site'>
+  <text class='Contact'>李四    13865237851</text>
+  <text class='location'>浙江省杭州市下沙区鑫鑫大厦12楼</text>
+</view>

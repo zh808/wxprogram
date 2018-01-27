@@ -1,0 +1,70 @@
+<!--pages/me/me.wxml-->
+<view class="container1" style='background-image:url("../../../images/icons/ccc.png")'>
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <view class="userinfo-nickname">
+        <text>{{userInfo.nickName}}</text>
+      </view>
+    </block>
+  </view>
+</view>
+
+<view class="container2">
+  <view class=" myorder-text">
+    我的运输单
+  </view>
+  <view class="myorderlook-text" bindtap="toast">
+    查看全部订单
+    <image class='pic' src='../../../images/icons/next.png'></image>
+  </view>
+</view>
+<view class='container3'>
+  <view class='container3_tupian'>
+    <image class='tupian' src='../../../images/icons/Waitinglist.png'></image>
+    <view>待接单</view>
+  </view>
+  <view class='container3_tupian'>
+    <image class='tupian' src='../../../images/icons/underway.png'></image>
+    <view>进行中</view>
+  </view>
+  <view class='container3_tupian'>
+    <image class='tupian' src='../../../images/icons/Completed.png'></image>
+    <view>已完成</view>
+  </view>
+  <view class='container3_tupian'>
+    <image class='tupian' src='../../../images/icons/canceled.png'></image>
+    <view>已取消</view>
+  </view>
+</view>
+<view class='menu' bindtap='toast1'>
+  <view style=' display:flex;align-items: center;'>
+    <image src='../../../images/icons/directory.png' class='tupianself'></image>
+    <view class='site'>
+      <text decode='true'>&nbsp;&nbsp;地址簿</text>
+    </view>
+  </view>
+  <image class='pic' src='../../../images/icons/next.png'></image>
+</view>
+<view class='menu1'>
+  <view style=' display:flex;align-items: center;'>
+    <image src='../../../images/icons/roll.png' class='tupianself'></image>
+    <text decode='true'>&nbsp;&nbsp;我的优惠券</text>
+  </view>
+  <image class='pic' src='../../../images/icons/next.png'></image>
+</view>
+<view class='menu2'>
+  <view style=' display:flex;align-items: center;'>
+    <image src='../../../images/icons/aaa.png' class='tupianself'></image>
+    <text decode='true'>&nbsp;&nbsp;我的钱包</text>
+  </view>
+  <image class='pic' src='../../../images/icons/next.png'></image>
+</view>
+<view class='menu3'>
+  <view style=' display:flex;align-items: center;'>
+    <image src='../../../images/icons/bbb.png' class='tupianself'></image>
+    <text decode='true'>&nbsp;&nbsp;联系客服</text>
+  </view>
+  <image class='pic' src='../../../images/icons/next.png'></image>
+</view>

@@ -1,0 +1,19 @@
+<!--pages/order/order.wxml-->
+<view class='front'>
+  <text>长城机电长途专线</text>
+</view>
+<view class='list_container'>
+  <navigator url='../makeOrder/makeOrder?line_id={{item.line_id}}' hover-class="none" class='list_item' wx:for='{{list}}' wx:key=' '>
+    <image class='img_company_icon' src='../../../images/icons/company_icon.png'></image>
+    <view style='width:25%;'>
+      <image class='img_icon_s' src='../../../images/icons/place_start.png'></image>
+      <text decode='true'>&nbsp;{{item.shipper_addr}}</text>
+    </view>
+    <image src='../../../images/icons/point_right.png'></image>
+    <view style='width:25%;'>
+      <image class='img_icon_s' src='../../../images/icons/place_end.png'></image>
+      <text decode='true'>&nbsp;{{item.receiver_addr}}</text>
+    </view>
+    <image src='../../../images/icons/right.png'></image>
+  </navigator>
+</view>
