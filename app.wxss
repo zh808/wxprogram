@@ -19,6 +19,7 @@ text {white-space: nowrap;}
 .line {display: flex;align-items: center;}
 /* 行元素两边对齐  */
 .space_between {justify-content: space-between;}
+.space_around {justify-content: space-around}
 /* 细下划线  */
 .border_bottom{border-bottom:1px solid #e8e8e8 }
 /* 通用内边距  */

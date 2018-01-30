@@ -31,7 +31,7 @@ Page({
             url: getApp().globalData.root_url + '/admin-ssm/shipperWaybill/addAddr.do',
             method: "GET",
             data: {
-              user_id: '151583386374954925',
+              user_id: getApp().globalData.user_id+'',
               default: 'no',
               receiver_name: receiver_name,
               receiver_phone: receiver_phone,

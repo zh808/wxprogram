@@ -52,4 +52,4 @@
   <text style='font-size:36rpx;color:red;'>￥{{order_inf.real_money}}元</text>
 </view>
 
-  <view class='confirm'>立即支付</view>
+  <view class='confirm' bindtap='confirm_order'>立即支付</view>

@@ -4,7 +4,7 @@
     <image src='{{item.img}}' />
     <view style='margin-left:10px'>
       <view style='padding:5px;'>
-        <text>{{item.text_}}</text>
+        <text>{{item.text_}}{{item.number_}}</text>
       </view>
       <view style='display:flex;align-items:center;padding:5px;'>
         <image class='img_icon_s' src='../../../images/icons/place_start.png' />

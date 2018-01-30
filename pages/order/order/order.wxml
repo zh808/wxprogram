@@ -9,7 +9,7 @@
       <view>
         <image class='img_icon_s' src='../../../images/icons/place_start.png'></image>
       </view>
-      <view>
+      <view class='inaline'>
         <text decode='true'>&nbsp;{{item.shipper_addr}}</text>
       </view>
     </view>
@@ -18,7 +18,7 @@
       <view>
         <image class='img_icon_s' src='../../../images/icons/place_end.png'></image>
       </view>
-      <view>
+      <view class='inaline'>
         <text decode='true'>&nbsp;{{item.receiver_addr}}</text>
       </view>
     </view>

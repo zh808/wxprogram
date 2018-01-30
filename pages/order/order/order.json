@@ -1,5 +1,6 @@
 {
   "navigationBarBackgroundColor": "#28B6FF",
   "navigationBarTitleText": "下单",
-  "navigationBarTextStyle":"white"
+  "navigationBarTextStyle":"white",
+  "enablePullDownRefresh": true
   }

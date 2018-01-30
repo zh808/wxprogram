@@ -26,11 +26,10 @@ Page({
    */
   onLoad: function (options) {
     this.setData({ type: options.type })
-
     var that = this
     wx.request({
       url: getApp().globalData.root_url +'/admin-ssm/shipperWaybill/getAddrList.do',
-      data: { user_id:'151583386374954925'},
+      data: { user_id:getApp().globalData.user_id},
       method: 'GET',
       success: function (res) { that.setData({ list: res.data }) },
       fail: function () {

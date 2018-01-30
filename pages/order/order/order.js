@@ -16,7 +16,8 @@ Page({
     wx.request({
       url: getApp().globalData.root_url + '/admin-ssm/shipperWaybill/getLineAll.do',
       method: 'POST',
-      success: function (res) { that.setData({ list: res.data }) },
+      success: function (res) {
+         that.setData({ list: res.data }) },
       fail: function () {
         console.log('error_connection')
         that.setData({ list: [{ shipper_addr: 'error', receiver_addr: 'error' }] })
@@ -56,7 +57,19 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    var that=this
+    wx.request({
+      url: getApp().globalData.root_url + '/admin-ssm/shipperWaybill/getLineAll.do',
+      method: 'POST',
+      success:res=> {
+        that.setData({ list: res.data })
+      },
+      fail: res => {
+        console.log('error_connection')
+        that.setData({ list: [{ shipper_addr: 'error', receiver_addr: 'error' }] })
+      },
+      complete: res =>{wx.stopPullDownRefresh()}
+    })
   },
 
   /**

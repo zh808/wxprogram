@@ -5,23 +5,23 @@
 
 <!-- 提问部分  -->
 <form bindsubmit="formSubmit">
-<view hidden='{{swith_area!==0}}'>
-  <view class='line wrap space_between padding_10px'>
-    <view class='question_type {{question_type_select==index?"selected":" "}}' wx:for="{{['整车','拼车','同城','快递','海运','空运','跑腿','综合']}}" wx:key=' ' data-question_type_index='{{index}}' bindtap='question_type_select'>
-      {{item}}
+  <view hidden='{{swith_area!==0}}'>
+    <view class='line wrap space_between padding_10px'>
+      <view class='question_type {{question_type_select==index?"selected":" "}}' wx:for="{{['整车','拼车','同城','快递','海运','空运','跑腿','综合']}}" wx:key=' ' data-question_type_index='{{index}}' bindtap='question_type_select'>
+        {{item}}
+      </view>
     </view>
+    <view class='question_area'>
+      <textarea name='write_question' class='write_question' placeholder='描述你的疑惑或者看法...' />
+    </view>
+    <view class='line space_around'>
+      <view wx:for='{{[pic0,pic1,pic2]}}' wx:key=' '>
+        <image wx:if='{{item}}' src='{{item}}' bindtap='chooseImageTap' data-index='{{index}}'/>
+        <image wx:else src='../../images/icons/add_photo.png' bindtap='chooseImageTap' data-index='{{index}}'/>
+      </view>
+    </view>
+    <button formType="submit" class='confirm'>提交</button>
   </view>
-  <view class='question_area'>
-    <textarea name='write_question' class='write_question' placeholder='描述你的疑惑或者看法...' />
-  </view>
-  <view class='line space_between'>
-    <image src='../../images/icons/add_photo.png' />
-    <image src='../../images/icons/add_photo.png' />
-    <image src='../../images/icons/add_photo.png' />
-    <image src='../../images/icons/add_photo.png' />
-  </view>
-  <button formType="submit" class='confirm'>提交</button>
-</view>
 </form>
 
 <!-- 回答部分  -->
@@ -33,6 +33,6 @@
       <text class='font_ss color_gray'>　{{item.question_time}}</text>
       <view class='font_s color_gray'>{{item.question_desc}}</view>
     </view>
-    <image class='img_s' src='../../images/icons/right.png'/>
+    <image class='img_s' src='../../images/icons/right.png' />
   </view>
 </view>

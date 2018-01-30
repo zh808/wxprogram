@@ -46,7 +46,7 @@ Page({
         terminus: this.data.receiver_inf.addr,
         shipper_name: this.data.sender_inf.name,
         shipper_phone: this.data.sender_inf.tel,
-        shipper:'151583386374954925',
+        shipper:getApp().globalData.user_id,
         receiver_name: this.data.receiver_inf.name,
         receiver_phone: this.data.receiver_inf.tel,
         type: this.data.packageWay_select[this.data.current_packageWay].sign,
@@ -58,15 +58,6 @@ Page({
         real_money: this.data.size_select[this.data.current_size].price * this.data.number_select[this.data.number_index],
         description: e.detail.value.remark
       }
-      console.log(JSON.stringify(order_inf))
-      wx.request({
-        url: getApp().globalData.root_url +'/admin-ssm/shipperWaybill/addWaybill.do',
-        method:'GET',
-        data: order_inf,
-       success:function(){
-         console.log('success')
-       }
-      })
       wx.navigateTo({
         url: '../confirmOrder/confirmOrder?order_inf=' + JSON.stringify(order_inf),
       })

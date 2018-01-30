@@ -7,8 +7,8 @@
     <textarea name='write_question' class='write_question' placeholder='描述你的疑惑或者看法...' />
   </view>
   <view class='line space_between'>
-    <image src='../../../images/icons/add_photo.png' catchtap="chooseImageTap" />
-    <image src='{{logo}}' />
+    <image  wx:if="{{logo}}" src='{{logo}}' />
+    <image wx:else src='../../../images/icons/add_photo.png' catchtap="chooseImageTap" />
     <image src='../../../images/icons/add_photo.png' />
     <image src='../../../images/icons/add_photo.png' />
   </view>
