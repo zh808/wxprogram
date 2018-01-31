@@ -1,17 +1,39 @@
 /* pages/manage/manage.wxss */
+
 .site {
   border-radius: 10rpx;
   background-color: white;
   margin: 20rpx;
   padding: 20rpx;
-  height: 120rpx;
+  height: 150rpx;
 }
 
 .Contact {
   float: left;
-  margin-top: 20rpx;
+  margin-top: 10rpx;
 }
 
 .location {
-  margin-top: 200rpx;
+  margin-top: 10rpx;
+}
+
+.line {
+  width: 100%;
+  height: 1rpx;
+  background: #e8e8e8;
+}
+.Patientia{
+   display: flex; 
+   margin-top:15rpx; 
+   align-content: center;
+     /* justify-content: space-between;  */
+} 
+.compile{
+   display: flex; 
+    align-content: center;
+    margin-left: 230rpx;
+}
+.remark{
+  height: 50rpx;
+  width: 40rpx;
 }

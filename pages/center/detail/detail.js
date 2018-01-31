@@ -1,4 +1,4 @@
-// pages/me_site/me_site.js
+// pages/center/detail/detail.js
 Page({
 
   /**
@@ -6,16 +6,6 @@ Page({
    */
   data: {
   
-  },
-  toast: function () {
-    wx.navigateTo({
-      url: '../manage/manage'
-    })
-  },
-  toast1: function () {
-    wx.navigateTo({
-      url: '../increase/increase'
-    })
   },
 
   /**

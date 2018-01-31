@@ -54,7 +54,7 @@
   </view>
   <image class='pic' src='../../../images/icons/next.png'></image>
 </view>
-<view class='menu2'>
+<view class='menu2' bindtap='toast2'>
   <view style=' display:flex;align-items: center;'>
     <image src='../../../images/icons/aaa.png' class='tupianself'></image>
     <text decode='true'>&nbsp;&nbsp;我的钱包</text>

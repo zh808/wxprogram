@@ -1,9 +1,11 @@
 {
   "pages": [
-    "pages/index/index/index",
     "pages/center/me/me",
-    "pages/center/meyundan/meyundan",
+    "pages/index/index/index",
+    "pages/center/wallet/wallet",
+    "pages/center/redact/redact",
     "pages/center/manage/manage",
+    "pages/center/meyundan/meyundan",
     "pages/center/me_site/me_site",
     "pages/order/writeAddress/writeAddress",
     "pages/index/order_inf/picking",
@@ -12,7 +14,9 @@
     "pages/Q&A/Q&A",
     "pages/order/makeOrder/makeOrder",
     "pages/order/addressBook/addressBook",
-    "pages/order/confirmOrder/confirmOrder"
+    "pages/order/confirmOrder/confirmOrder",
+    "pages/center/increase/increase",
+    "pages/center/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

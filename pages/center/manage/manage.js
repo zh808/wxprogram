@@ -5,7 +5,29 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    Patientia: true,
+    warning_text: true,
+    warning_tel:true
+  },
+  Patientia: function (e) {
+    this.setData({
+      Patientia: !this.data.Patientia
+    })
+   },
+  data: {
+    Patientia: false,
+    warning_text: false,
+    warning_tel: true
+  },
+  Patientia: function (e) {
+    this.setData({
+      Patientia: !this.data.Patientia
+    })
+  },
+  toast: function () {
+    wx.navigateTo({
+      url: '../redact/redact'
+    })
   },
 
   /**

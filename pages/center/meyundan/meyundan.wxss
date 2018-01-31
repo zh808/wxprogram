@@ -56,7 +56,6 @@
 }
 
 .waitingUp {
-  /* border: 1px solid red; */
   background-color: white;
   padding-top: 10rpx;
   padding-bottom: 10rpx;
@@ -71,7 +70,7 @@
 
 .photoPin {
   width: 100rpx;
-  height: 170rpx;
+  height: 150rpx;
   float: left;
 }
 

@@ -1,5 +1,35 @@
 <!--pages/manage/manage.wxml-->
 <view class='site'>
   <text class='Contact'>李四    13865237851</text>
-  <text class='location'>浙江省杭州市下沙区鑫鑫大厦12楼</text>
+  <text class='location' style="color:#979797">浙江省杭州市下沙区鑫鑫大厦12楼</text>
+  <view class='line' width='100%'></view>
+
+  <view class=' Patientia'>
+    <icon hidden='{{! Patientia}}' bindtap='Patientia' type='success' color='#28B6FF'></icon>
+    <icon hidden='{{ Patientia}}' bindtap='Patientia' type='circle' color='#28B6FF' style='60%'></icon>
+    <text>设为默认</text>
+    <view class='compile'>
+    <image class='remark' src='../../../images/icons/remark.png'></image>
+    <text decode='true' bindtap='toast'>&nbsp;&nbsp;编辑 &nbsp;&nbsp;</text>
+    <image class='remark' src='../../../images/icons/remark.png'></image>
+    <text decode='true'>&nbsp;&nbsp;删除 &nbsp;&nbsp;</text>
+    </view>
+  </view>
+</view>
+<view class='site'>
+  <text class='Contact'>李四    13865237851</text>
+  <text class='location' style="color:#979797">浙江省杭州市下沙区鑫鑫大厦12楼</text>
+  <view class='line' width='100%'></view>
+
+  <view class=' Patientia'>
+    <icon hidden='{{ Patientia}}' bindtap='Patientia' type='circle' color='#28B6FF' style='60%'></icon>
+    <icon hidden='{{! Patientia}}' bindtap='Patientia' type='success' color='#28B6FF'></icon>
+    <text>设为默认</text>
+    <view class='compile'>
+    <image class='remark' src='../../../images/icons/remark.png'></image>
+    <text decode='true' bindtap='toast'>&nbsp;&nbsp;编辑 &nbsp;&nbsp;</text>
+    <image class='remark' src='../../../images/icons/remark.png'></image>
+    <text decode='true'>&nbsp;&nbsp;删除 &nbsp;&nbsp;</text>
+    </view>
+  </view>
 </view>

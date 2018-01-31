@@ -13,16 +13,21 @@ Page({
       url: '../logs/logs'
     })
   },
-    toast: function () {
-      wx.navigateTo({
-        url: '../meyundan/meyundan'
-      })
-    },
-    toast1: function () {
-      wx.navigateTo({
-        url: '../me_site/me_site'
-      })
-    },
+  toast: function () {
+    wx.navigateTo({
+      url: '../meyundan/meyundan'
+    })
+  },
+  toast1: function () {
+    wx.navigateTo({
+      url: '../me_site/me_site'
+    })
+  },
+  toast2: function () {
+    wx.navigateTo({
+      url: '../wallet/wallet'
+    })
+  },
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
