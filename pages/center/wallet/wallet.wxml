@@ -1,0 +1,46 @@
+<!--pages/center/wallet/wallet.wxml-->
+<view class='purse'>
+  <image class='burse' src='../../../images/icons/burse.png'></image>
+</view>
+<view class='user_name'>
+  <text class='yonghu'>用户名</text>
+  <button class=' recharge' type="primary" bindtap="modalinput">去充值</button>
+  <modal hidden="{{hiddenmodalput}}" title="账户充值" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+    <input type='text' placeholder="请输入充值金额（元）" auto-focus/>
+  </modal>
+</view>
+<view class='line' bindtap='toast'>
+  <text>流水明细</text>
+</view>
+<view class='body'>
+  <view class='bb'>
+    <view class='text'>运费</view>
+    <view class='shangxia'>
+      <view class='luxian'>
+        <view class='tt'>长城机电</view>
+        <image class='pic' src='../../../images/icons/jiantou.png'></image>
+        <view class='tt'>临安</view>
+      </view>
+      <view class='shijian'>10-23 14:36</view>
+    </view>
+  </view>
+  <view>
+    <text class='qian'>-320</text>
+  </view>
+</view>
+<view wx:for="{{list}}">
+  <view class='body'>
+    <view class='bb'>
+      <view class='text'>{{item.left}}</view>
+      <view class='shangxia'>
+        <view class='luxian'>
+          <view class='tt'>{{item.luxian}}</view>
+          <image class='pic' src='{{item.pic}}'></image>
+          <view class='tt'>{{item.luxain1}}</view>
+        </view>
+        <view class='shijian'>{{item.shijian}}</view>
+      </view>
+    </view>
+    <text class='qian'>{{item.money}}</text>
+  </view>
+</view>

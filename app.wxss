@@ -8,10 +8,11 @@ text {white-space: nowrap;}
 .nowrap{flex-wrap: nowrap;}
 /* 元素自动换行  */
 .wrap{flex-wrap: wrap;}
-/* 字体  */
+/* 大号字体  */
 .font_m {font-size: 40rpx;}
-.font_mm{font-size: 36rpx;}
+/* 小号字体  */
 .font_s {font-size: 30rpx;}
+/* 超小字体  */
 .font_ss {font-size: 25rpx;}
 /* 灰色  */
 .color_gray {color: grey;}
@@ -19,24 +20,19 @@ text {white-space: nowrap;}
 .line {display: flex;align-items: center;}
 /* 行元素两边对齐  */
 .space_between {justify-content: space-between;}
-.space_around {justify-content: space-around}
 /* 细下划线  */
 .border_bottom{border-bottom:1px solid #e8e8e8 }
 /* 通用内边距  */
 .padding_10px{padding:10px;}
-.padding_5px{padding:5px;}
 /* 通用外边距  */
 .margin_10px{margin: 10px;}
-.margin_5px{margin: 5px;}
-/* 超出文本框隐藏  */
-.inaline{overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
 /* 自定义容器  */
 .MyContainer {margin: 10px;padding: 10px;background-color: #fff;border-radius: 5px;}
 /* 确定按钮  */
 .confirm {height: 45px;margin: 40px 20px 0 20px;background-color: #28b6ff;
  display: flex;align-items: center;justify-content: center;color: white; border-radius: 30px;}
 /* 页面顶部  */
-.front {padding: 5px;background-color: #eae1e1;color: #999;text-align: center;font-size: 30rpx;
+.front {padding: 5px;background-color: #eae1e1;color: #999;text-align: center;font-size: 14rpx;
   font-family: 'Times New Roman', Times, serif;}
 .backgroundcolor_gray{background-color: #e8e8e8;}
 .warning_text{   align-items: center;   text-align: center;   color: red;}

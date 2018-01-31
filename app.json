@@ -1,6 +1,10 @@
 {
   "pages": [
     "pages/index/index/index",
+    "pages/center/wallet/wallet",
+    "pages/order/confirmOrder/confirmOrder",
+    "pages/center/increase/increase",
+    "pages/center/redact/redact",
     "pages/index/order_inf/order_progress",
     "pages/index/comment/comment",
     "pages/index/order_inf/order_list",
@@ -14,7 +18,7 @@
     "pages/order/order/order",
     "pages/order/makeOrder/makeOrder",
     "pages/order/addressBook/addressBook",
-    "pages/order/confirmOrder/confirmOrder"
+    "pages/center/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

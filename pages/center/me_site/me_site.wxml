@@ -10,17 +10,17 @@
 </view>
 <view class='site'>
   <text class='Contact'>李四    13865237851</text>
-  <text class='location'>浙江省杭州市下沙区鑫鑫大厦12楼</text>
+  <text class='location' style="color:#979797">浙江省杭州市下沙区鑫鑫大厦12楼</text>
 </view>
 <view class='site'>
   <text class='Contact'>李四    13865237851</text>
-  <text class='location'>浙江省杭州市下沙区鑫鑫大厦12楼</text>
+  <text class='location' style="color:#979797">浙江省杭州市下沙区鑫鑫大厦12楼</text>
 </view>
 <view class='site'>
   <text class='Contact'>李四    13865237851</text>
-  <text class='location'>浙江省杭州市下沙区鑫鑫大厦12楼</text>
+  <text class='location' style="color:#979797">浙江省杭州市下沙区鑫鑫大厦12楼</text>
 </view> 
 <view class='zongti'>
 <button class='guanli' bindtap='toast'>管理</button>
-<button class='tianjia'>添加联系人</button>
+<button class='tianjia' bindtap='toast1'>添加联系人</button>
 </view>

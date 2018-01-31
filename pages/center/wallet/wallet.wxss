@@ -1,0 +1,84 @@
+/* pages/center/wallet/wallet.wxss */
+
+.purse {
+  margin: 20rpx 20rpx 20rpx 20rpx;
+}
+
+.burse {
+  width: 100%;
+}
+
+.yonghu {
+  font-size: 30rpx;
+  margin: 20rpx 0 0 80rpx;
+}
+
+.user_name {
+  font-size: 30rpx;
+  position: fixed;
+  top: 400rpx;
+  display: flex;
+}
+
+.recharge {
+  margin-top: 20rpx;
+  margin-left: 370rpx;
+  height: 50rpx;
+  width: 150rpx;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  background: rgb(255, 162, 33);
+  border-radius: 30rpx;
+  color: white;
+}
+
+.line {
+  display: flex;
+  justify-content: center;
+   margin: 10rpx 0 30rpx 0; 
+  height: 1rpx;
+  background: #888;
+}
+
+.body {
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-bottom: 1rpx solid #E3E3E3;
+}
+
+.bb {
+  display: flex;
+  justify-content: space-between;
+}
+
+.luxian {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text {
+  font-size: 40rpx;
+  padding-right: 20rpx;
+}
+
+.tt {
+  font-size: 30rpx;
+  padding-right: 40rpx;
+}
+
+.pic {
+  width: 70rpx;
+  height: 10rpx;
+  padding-right: 40rpx;
+}
+
+.shijian {
+  color: #999;
+}
+.qian{
+  color: red;
+}
