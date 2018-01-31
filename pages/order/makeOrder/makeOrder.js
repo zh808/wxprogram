@@ -1,11 +1,12 @@
 // pages/makeOrder/makeOrder.js
+const Gdata = getApp().globalData
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    sender_inf: { addr: '您当前的位置', name: '点击', tel: '编辑寄件人信息' },
+    shipper_inf: { addr: '您当前的位置', name: '点击', tel: '编辑寄件人信息' },
     receiver_inf: { addr: '您想送到哪里？', name: '请选', tel: '择您的送货地址' },
     packageWay_select: [
       { name: '门店发货', sign:'shop',pic: '../../../images/icons/store.png', intro: '16点前发货' },
@@ -41,11 +42,11 @@ Page({
       console.log('请填写发货方式')
     } else {
       var order_inf= {
-        line_id: this.data.line_id,
-        origin: this.data.sender_inf.addr,
+        line_id: this.data.line.line_id,
+        origin: this.data.shipper_inf.addr,
         terminus: this.data.receiver_inf.addr,
-        shipper_name: this.data.sender_inf.name,
-        shipper_phone: this.data.sender_inf.tel,
+        shipper_name: this.data.shipper_inf.name,
+        shipper_phone: this.data.shipper_inf.tel,
         shipper:getApp().globalData.user_id,
         receiver_name: this.data.receiver_inf.name,
         receiver_phone: this.data.receiver_inf.tel,
@@ -69,7 +70,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({ line_id: options.line_id})
+    this.setData({ line: options.line})
   },
 
   /**

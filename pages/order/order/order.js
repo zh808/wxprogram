@@ -1,4 +1,5 @@
 // pages/order/order.js
+const Gdata =getApp().globalData
 Page({
 
   /**
@@ -12,17 +13,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this
-    wx.request({
-      url: getApp().globalData.root_url + '/admin-ssm/shipperWaybill/getLineAll.do',
-      method: 'POST',
-      success: function (res) {
-         that.setData({ list: res.data }) },
-      fail: function () {
-        console.log('error_connection')
-        that.setData({ list: [{ shipper_addr: 'error', receiver_addr: 'error' }] })
-      }
-    })
+  
   },
 
   /**
@@ -36,7 +27,20 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that = this
+    wx.request({
+      url: Gdata.root_url + '/admin-ssm/shipperWaybill/getLineAll.do',
+      method: 'POST',
+      success: function (res) {
+        console.log(res)
+        Gdata.lines = res.data
+        that.setData({ list: res.data })
+      },
+      fail: function () {
+        console.log('error_connection')
+        that.setData({ list: [{ shipper_addr: 'error', receiver_addr: 'error' }] })
+      }
+    })
   },
 
   /**

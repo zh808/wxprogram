@@ -3,8 +3,8 @@
   <text>长城机电长途专线</text>
 </view>
 <view class='list_container'>
-  <navigator url='../makeOrder/makeOrder?line_id={{item.line_id}}' hover-class="none" class='list_item' wx:for='{{list}}' wx:key=' '>
-    <image class='img_company_icon' src='../../../images/icons/company_icon.png'></image>
+  <navigator url='../makeOrder/makeOrder?line={{index}}' hover-class="none" class='list_item' wx:for='{{list}}' wx:key=' '>
+    <image class='img_company_icon' src='{{item.images}}'></image>
     <view class='loc'>
       <view>
         <image class='img_icon_s' src='../../../images/icons/place_start.png'></image>

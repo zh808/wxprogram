@@ -1,21 +1,21 @@
 <!--pages/makeOrder/makeOrder.wxml-->
-<view class='front'>东海物流</view>
+<view class='front'>{{line.company_name}}</view>
 <form bindsubmit="formSubmit">
 <view class='address'>
   <image class='img_loc' src='../../../images/icons/place_start.png'></image>
-  <navigator url='../writeAddress/writeAddress?type=sender' hover-class="none" class='address_show'>
+  <navigator url='../writeAddress/writeAddress?type=shipper&line={{line}}' hover-class="none" class='address_show'>
     <view class='address_pos'>
-      <text>{{sender_inf.addr}}</text>
+      <text>{{shipper_inf.addr}}</text>
     </view>
     <view class='address_inf'>
-      <text>{{sender_inf.name}}{{sender_inf.tel}}</text>
+      <text>{{shipper_inf.name}}{{shipper_inf.tel}}</text>
   </view>
     </navigator>
-  <navigator url='../addressBook/addressBook?type=sender' hover-class="none" class='FromAdressBook'>地址簿</navigator>
+  <navigator url='../addressBook/addressBook?type=shipper' hover-class="none" class='FromAdressBook'>地址簿</navigator>
 </view>
 <view class='address' style='border-bottom: 10px solid #e8e8e8;'>
   <image class='img_loc' src='../../../images/icons/place_end.png'></image>
-  <navigator url='../writeAddress/writeAddress?type=receiver' hover-class="none" class='address_show'>
+  <navigator url='../writeAddress/writeAddress?type=receiver&line={{line}}' hover-class="none" class='address_show'>
     <view class='address_pos'>
       <text>{{receiver_inf.addr}}</text>
     </view>

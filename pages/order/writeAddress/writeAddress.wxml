@@ -9,6 +9,11 @@
     <text>电　　话　</text>
     <input name='_tel' type='number' placeholder-style='font-size:14px;' maxlength='11' placeholder='请输入您的联系方式（必填）' />
   </view>
+    <view class='address_inf'>
+    <text>区　　域　</text>
+    <text hidden='{{!shipper_Y}}' style='font-size:14px;'>{{line_inf.begin_province}}{{line_inf.begin_city}}{{line_inf.begin_district}}</text>
+    <text hidden='{{!receiver_Y}}' style='font-size:14px;'>{{line_inf.end_province}}{{line_inf.end_city}}{{line_inf.end_district}}</text>
+  </view>
   <view class='address_inf' style='border-bottom:none;'>
     <text>详细地址　</text>
     <input name='_addr' placeholder-style='font-size:14px;' placeholder='请输入您的详细地址（必填）' />

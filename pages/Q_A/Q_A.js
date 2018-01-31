@@ -6,8 +6,10 @@ Page({
    * 页面的初始数据
    */
   data: {
+    warning_text: true,
     swith_area: 0,
     question_type_select: -1,
+    question_type_list: ['整车', '拼车', '同城', '快递', '海运', '空运', '跑腿', '综合'],
     list: [
       { question_type: '拼车', question_desc: '问题问题问题问题......', images: '../../images/icons/question_type1.png', question_time: '12-22 10:20' },
       { question_type: '整车', question_desc: '问题问题问题问题......', images: '../../images/icons/question_type2.png', question_time: '12-22 10:20' },
@@ -51,17 +53,36 @@ Page({
     })
   },
   formSubmit: function (e) {
-    var that = this
+    var that = this; var pic0 = null; var pic1 = null; var pic2 = null
     if (this.data.question_type_select !== -1) {
-      if (this.data.pic0) { util.uplode_file(this.data.pic0) }
-      if (this.data.pic1) { util.uplode_file(this.data.pic1) }
-      if (this.data.pic2) { util.uplode_file(this.data.pic2) }
-      wx.showLoading({
-        title: '正在提交问题',
-        success: res => { setTimeout(function () { wx.hideLoading(), that.setData({ swith_area: 1 }) }, 2000) }
-      })
+      this.setData({ warning_text: true })
+      if (this.data.pic0) { util.uplode_file(this.data.pic0).then(res => { pic0 = res.data }) }
+      if (this.data.pic1) { util.uplode_file(this.data.pic1).then(res => { pic1 = res.data }) }
+      if (this.data.pic2) { util.uplode_file(this.data.pic2).then(res => { pic2 = res.data }) }
+      else {
+        wx.showLoading({
+          title: '正在提交问题',
+          success: res => {
+            var images = []
+            images.push(pic0)
+            console.log(images)
+            var dt = {
+              question_type: this.data.question_type_list[this.data.question_type_select],
+              question_desc: e.detail.value.write_question,
+              images: images,
+              user_id: getApp().globalData.user_id
+            }
+            console.log(dt)
+            util.httpUrl('/admin-ssm/shipperMain/addQuestion.do', dt).then(res => {
+              console.log('提交问题成功:',res)
+              wx.hideLoading()
+              that.setData({ swith_area: 1 })
+            })
+          }
+        })
+      }
     }
-    else { console.log("选择type") }
+    else { this.setData({ warning_text: false }) }
   },
   /**
    * 生命周期函数--监听页面加载

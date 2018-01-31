@@ -12,8 +12,8 @@ Page({
     var prevPage = pages[pages.length - 2];
     var current_addr = this.data.list[e.currentTarget.dataset.index];
     var addr_inf = { name: current_addr.receiver_name, tel: current_addr.receiver_phone, addr: current_addr.receiver_addr}
-    if (this.data.type == 'sender') {
-      prevPage.setData({ sender_inf: addr_inf })
+    if (this.data.type == 'shipper') {
+      prevPage.setData({ shipper_inf: addr_inf })
       wx.navigateBack({})
     }
     if (this.data.type == 'receiver') {
@@ -31,8 +31,8 @@ Page({
       url: getApp().globalData.root_url +'/admin-ssm/shipperWaybill/getAddrList.do',
       data: { user_id:getApp().globalData.user_id},
       method: 'GET',
-      success: function (res) { that.setData({ list: res.data }) },
-      fail: function () {
+      success: res=> { that.setData({ list: res.data }) },
+      fail: res=> {
         console.log('err_connection')
         that.setData({ list: [{ receiver_name: 'err', receiver_addr: 'err' }] })
       }

@@ -35,7 +35,7 @@ Page({
             icon: 'success',
             duration: 2000,
             success: function () {
-              setTimeout(function () { wx.navigateTo({ url: '/pages/index/comment/comment', }) }, 3000);
+              setTimeout(function () { wx.navigateTo({ url: '/pages/index/comment/comment', }) }, 2000);
             }
           })
         } else {

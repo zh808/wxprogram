@@ -9,17 +9,19 @@ Page({
   },
 
   confirm_order: function () {
+    wx.showLoading({ title: '正在发布订单...' })
     wx.request({
       url: getApp().globalData.root_url + '/admin-ssm/shipperWaybill/addWaybill.do',
       method: 'GET',
       data: this.data.order_inf,
       success: function () {
+        wx.hideLoading()
         wx.showToast({
           title: '下单成功！',
           icon: 'success',
-          duration: 2000,
+          duration: 1000,
           success: function () {
-            setTimeout(function () { wx.switchTab({ url: '/pages/order/order/order', }) }, 3000);
+            setTimeout(function () { wx.switchTab({ url: '/pages/order/order/order', }) }, 1000);
           }
         })
       }

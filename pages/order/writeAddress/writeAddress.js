@@ -1,4 +1,5 @@
 // pages/order/makeAddress/makeAddress.js
+const Gdata = getApp().globalData
 Page({
 
   /**
@@ -7,7 +8,7 @@ Page({
   data: {
     save: true,
     warning_text: true,
-    warning_tel:true
+    warning_tel: true
   },
 
   save: function (e) {
@@ -18,44 +19,65 @@ Page({
 
   writeAddress: function (e) {
     this.setData({ warning_text: true })
-    var receiver_name = e.detail.value._name
-    var receiver_phone = e.detail.value._tel
-    var receiver_addr = e.detail.value._addr
-    if (receiver_name !== '' && receiver_phone !== '' && receiver_addr !== '') {
-      if (receiver_phone[10]) {
-        var pages = getCurrentPages();
-        var prevPage = pages[pages.length - 2];
-        var addr_inf = { name: receiver_name, tel: receiver_phone, addr: receiver_addr }
-        if (this.data.save == true) {
-          wx.request({
-            url: getApp().globalData.root_url + '/admin-ssm/shipperWaybill/addAddr.do',
-            method: "GET",
-            data: {
-              user_id: getApp().globalData.user_id+'',
-              default: 'no',
-              receiver_name: receiver_name,
-              receiver_phone: receiver_phone,
-              receiver_addr: receiver_addr
-            },
-            success: function () {console.log('保存地址信息成功！')}
-          })
+    var pages = getCurrentPages();
+    var prevPage = pages[pages.length - 2];
+    var _name = e.detail.value._name
+    var _phone = e.detail.value._tel
+    var _addr = e.detail.value._addr
+    if (_name !== '' && _phone !== '' && _addr !== '') {
+      if (_phone[10]) {
+        if (this.data.shipper_Y) {
+          if (this.data.save == true) {
+            var _addr_A = this.data.line_inf.begin_province + this.data.line_inf.begin_city + this.data.line_inf.begin_district + _addr
+            var addr_inf = { name: _name, tel: _phone, addr: _addr_A }
+            prevPage.setData({ shipper_inf: addr_inf })
+            wx.navigateBack({})
+            wx.request({
+              url: Gdata.root_url + '/admin-ssm/shipperWaybill/addAddr.do',
+              method: "GET",
+              data: {
+                user_id: Gdata.user_id + '',
+                default: 'no',
+                receiver_name: _name,
+                receiver_phone: _phone,
+                receiver_addr: _addr_A
+              },
+              success: function () { console.log('保存地址信息成功！') }
+            })
+          }
         }
-          if (this.data.type == 'sender') { prevPage.setData({ sender_inf: addr_inf })
+        if (this.data.receiver_Y) {
+          if (this.data.save == true) {
+            var _addr_A = this.data.line_inf.end_province + this.data.line_inf.end_city + this.data.line_inf.end_district + _addr
+            var addr_inf = { name: _name, tel: _phone, addr: _addr_A }
+            prevPage.setData({ receiver_inf: addr_inf })
             wx.navigateBack({})
+            wx.request({
+              url: Gdata.root_url + '/admin-ssm/shipperWaybill/addAddr.do',
+              method: "GET",
+              data: {
+                user_id: Gdata.user_id + '',
+                default: 'no',
+                receiver_name: _name,
+                receiver_phone: _phone,
+                receiver_addr: _addr_A
+              },
+              success: function () { console.log('保存地址信息成功！') }
+            })
           }
-          if (this.data.type == 'receiver') { prevPage.setData({ receiver_inf: addr_inf })
-            wx.navigateBack({})
-          }
+        }
       }
-      else { this.setData({ warning_text: true ,warning_tel: false })}
+      else { this.setData({ warning_text: true, warning_tel: false }) }
     }
-    else { this.setData({ warning_text: false, warning_tel:true}) }
+    else { this.setData({ warning_text: false, warning_tel: true }) }
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({ type: options.type })
+    if (options.type == 'shipper') { this.setData({ shipper_Y: true }) }
+    if (options.type == 'receiver') { this.setData({ receiver_Y: true }) }
+    this.setData({ line_inf: Gdata.lines[options.line] })
   },
 
   /**

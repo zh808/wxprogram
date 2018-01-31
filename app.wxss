@@ -39,3 +39,4 @@ text {white-space: nowrap;}
 .front {padding: 5px;background-color: #eae1e1;color: #999;text-align: center;font-size: 30rpx;
   font-family: 'Times New Roman', Times, serif;}
 .backgroundcolor_gray{background-color: #e8e8e8;}
+.warning_text{   align-items: center;   text-align: center;   color: red;}

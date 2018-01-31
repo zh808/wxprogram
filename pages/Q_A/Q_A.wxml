@@ -7,7 +7,7 @@
 <form bindsubmit="formSubmit">
   <view hidden='{{swith_area!==0}}'>
     <view class='line wrap space_between padding_10px'>
-      <view class='question_type {{question_type_select==index?"selected":" "}}' wx:for="{{['整车','拼车','同城','快递','海运','空运','跑腿','综合']}}" wx:key=' ' data-question_type_index='{{index}}' bindtap='question_type_select'>
+      <view class='question_type {{question_type_select==index?"selected":" "}}' wx:for="{{question_type_list}}" wx:key=' ' data-question_type_index='{{index}}' bindtap='question_type_select'>
         {{item}}
       </view>
     </view>
@@ -20,6 +20,9 @@
         <image wx:else src='../../images/icons/add_photo.png' bindtap='chooseImageTap' data-index='{{index}}'/>
       </view>
     </view>
+    <view class='warning_text'>
+<text hidden='{{warning_text}}' >请检查信息是否完整！</text>
+</view>
     <button formType="submit" class='confirm'>提交</button>
   </view>
 </form>
