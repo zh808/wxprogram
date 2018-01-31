@@ -1,0 +1,4 @@
+/* pages/order/makeAddress/makeAddress.wxss */
+.address_inf {  display: flex;  padding: 10px;  border-bottom: 1px solid #e8e8e8;  align-items: center;}
+.save {  display: flex;   align-items: center;  padding: 5px 10px 5px 10px;}
+.warning_text{   align-items: center;   text-align: center;   color: red;}

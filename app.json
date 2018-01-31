@@ -1,21 +1,23 @@
 {
   "pages": [
-    "pages/center/me/me",
     "pages/index/index/index",
     "pages/center/wallet/wallet",
-    "pages/center/redact/redact",
-    "pages/center/manage/manage",
-    "pages/center/meyundan/meyundan",
-    "pages/center/me_site/me_site",
-    "pages/order/writeAddress/writeAddress",
-    "pages/index/order_inf/picking",
-    "pages/index/order_inf/waiting",
-    "pages/order/order/order",
-    "pages/Q&A/Q&A",
-    "pages/order/makeOrder/makeOrder",
-    "pages/order/addressBook/addressBook",
     "pages/order/confirmOrder/confirmOrder",
     "pages/center/increase/increase",
+    "pages/center/redact/redact",
+    "pages/index/order_inf/order_progress",
+    "pages/index/comment/comment",
+    "pages/index/order_inf/order_list",
+    "pages/index/order_inf/order_detail",
+    "pages/Q_A/Q_A",
+    "pages/center/meyundan/meyundan",
+    "pages/center/manage/manage",
+    "pages/center/me/me",
+    "pages/center/me_site/me_site",
+    "pages/order/writeAddress/writeAddress",
+    "pages/order/order/order",
+    "pages/order/makeOrder/makeOrder",
+    "pages/order/addressBook/addressBook",
     "pages/center/detail/detail"
   ],
   "window": {
@@ -39,7 +41,7 @@
         "selectedIconPath": "./images/icons/order_s.png"
       },
       {
-        "pagePath": "pages/Q&A/Q&A",
+        "pagePath": "pages/Q_A/Q_A",
         "text": "问答 ",
         "iconPath": "./images/icons/Q&A.png",
         "selectedIconPath": "./images/icons/Q&A_s.png"

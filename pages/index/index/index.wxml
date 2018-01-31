@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class="showOrder">
+  <navigator wx:for='{{order_list}}' wx:key=' ' class='padding_10px border_bottom line' url='../order_inf/order_list?order_status={{index}}'>
+    <image src='{{item.img}}' />
+    <view style='margin-left:10px'>
+      <view style='padding:5px;'>
+        <text>{{item.text_}}{{item.number_}}</text>
+      </view>
+      <view style='display:flex;align-items:center;padding:5px;'>
+        <image class='img_icon_s' src='../../../images/icons/place_start.png' />
+        <text>长城机电</text>
+        <image class='point' src='../../../images/icons/point_right.png' />
+        <image class='img_icon_s' src='../../../images/icons/place_end.png' />
+        <text>老余杭</text>
+      </view>
+    </view>
+  </navigator>
+</view>

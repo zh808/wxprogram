@@ -1,0 +1,45 @@
+<!--pages/index/order_inf/picking.wxml-->
+<view class='MyContainer line space_between'>
+  <view class='line'>
+    <image class='avatar' src='{{detail.carrier_avatar}}' />
+    <view class=''>
+      <view class='font_s'>东海物流/{{detail.carrier_name}}
+        <text wx:if='{{status==1}}' style='font_size:28rpx;color:gray;'>　已接单</text>
+        <text wx:if='{{status==2}}' style='font_size:28rpx;color:gray;'>　运输中</text>
+      </view>
+      <view class='font_ss margin_5px '>
+        <text class='backgroundcolor_gray '>{{detail.carrier_license_plate}}</text>
+      </view>
+      <view>{{detail.carrier_phone}}</view>
+    </view>
+  </view>
+  <image bindtap='call' data-carrier_phone='{{detail.carrier_phone}}' class='icon' src='/images/icons/call.png' />
+</view>
+<view class='MyContainer'>
+  <view wx:if='{{status==2}}' class='line'>
+    <image class='icon_' src='/images/icons/item.png' />
+    <view style='margin-left:15px;'>
+      <view style='margin-bottom:5px'>运输中</view>
+      <view class='font_ss'>{{detail.get_time}}</view>
+    </view>
+  </view>
+  <view class='line'>
+    <image class='icon_' src='/images/icons/item.png' />
+    <view style='margin-left:15px;'>
+      <view style='margin-bottom:5px'>已接单，接单司机{{detail.carrier_name}}：{{detail.carrier_phone}}</view>
+      <view class='font_ss'>{{detail.receive_time}}</view>
+    </view>
+  </view>
+  <view class='line'>
+    <image class='icon_' src='/images/icons/item.png' />
+    <view style='margin-left:15px;'>
+      <view style='margin-bottom:5px'>下单成功</view>
+      <view class='font_ss'>{{detail.begin_time}}</view>
+    </view>
+  </view>
+</view>
+<view class='margin_10px font_ss'>运单号：{{detail.waybill_id}}</view>
+<view class='margin_10px font_ss'>接单时间：{{detail.receive_time}}</view>
+<view wx:if='{{status==2}}' class='margin_10px font_ss'>发车时间：{{detail.get_time}}</view>
+<view wx:if='{{status==1}}' class='confirm font_m' bindtap='reminder'>催单</view>
+<view wx:if='{{status==2}}' class='confirm font_m' bindtap='confirm_arrive'>确认送达</view> 

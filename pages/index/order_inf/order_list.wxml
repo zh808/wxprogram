@@ -1,0 +1,36 @@
+<!--pages/index/order_inf/waiting.wxml-->
+<view class='MyContainer' wx:for='{{list}}' wx:key=' '>
+  <navigator class='line  border_bottom' url='./order_detail?order_index={{index}}&order_status={{order_status}}'>
+    <image class='img' src='{{item.avatar}}' />
+    <view class='text_loc'>
+      <view class='line color_gray padding_5px'>{{item.carrier_name}}{{item.carrier_name}}</view>
+      <view class='line' style='padding:0 5px 0 5px;'>
+        <view><image class='img_icon_s' src='../../../images/icons/place_start.png'></image></view>
+        <view class='inaline'><text>{{item.origin}}</text></view>
+      </view>
+      <view class='line padding_5px'>
+        <view> <image class='img_icon_s' src='../../../images/icons/place_end.png'></image> </view>
+        <view class='inaline'><text>{{item.terminus}}</text></view>
+      </view>
+    </view>
+  </navigator>
+
+  <view wx:if='{{order_status==0}}' class='line operating_area space_between'>
+    <view style='width:70%;'>
+      <text class='font_ss color_gray '>下单时间：{{item.begin_time}}</text>
+    </view>
+    <button class='button_s font_ss' bindtap='cancel_order' data-waybill_id='{{item.waybill_id}}'>删除订单</button>
+  </view>
+<view wx:if='{{order_status==1}}' class='line operating_area space_between'>
+    <view style='width:70%;'>
+      <text class='font_ss color_gray '>接单时间：{{item.receive_time}}</text>
+    </view>
+    <navigator url='./order_progress?order_index={{index}}&order_status={{order_status}}'><button class='button_s font_ss'>查看进度</button></navigator>
+  </view>
+<view wx:if='{{order_status==2}}' class='line operating_area space_between'>
+    <view style='width:70%;'>
+      <text class='font_ss color_gray '>发车时间：{{item.get_time}}</text>
+    </view>
+     <navigator url='./order_progress?order_index={{index}}&order_status={{order_status}}'><button class='button_s font_ss'>确认送达</button></navigator>
+  </view>
+</view>

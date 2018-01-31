@@ -1,0 +1,17 @@
+<!--pages/index/comment/comment.wxml-->
+<form>
+<view class='line'>
+
+</view>
+<view class='question_area'>
+    <textarea name='write_question' class='write_question' placeholder='描述你的疑惑或者看法...' />
+  </view>
+  <view class='line space_between'>
+    <image  wx:if="{{logo}}" src='{{logo}}' />
+    <image wx:else src='../../../images/icons/add_photo.png' catchtap="chooseImageTap" />
+    <image src='../../../images/icons/add_photo.png' />
+    <image src='../../../images/icons/add_photo.png' />
+  </view>
+  <button formType="submit" class='confirm'>提交</button>
+
+</form>

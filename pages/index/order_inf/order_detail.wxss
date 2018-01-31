@@ -1,0 +1,266 @@
+/* pages/zhuye/zhuye.wxss */
+
+page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #f8f8f8;
+}
+
+.qc-title {
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  margin-top: 3rpx;
+  height: 80rpx;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.qc-small-font {
+  font-size: 14px;
+  color: gray;
+}
+
+.line {
+  height: 1rpx;
+  background: #ddd;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.css_margin_left {
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+  font-size: 30rpx;
+}
+
+.qc-bg-white {
+  background: white;
+}
+
+.qc-title-margin {
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+
+text {
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 32rpx;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.qc-hover {
+  background: green;
+}
+
+.no-order {
+  color: red;
+  font-size: 25rpx;
+  height: 100rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/*水平  */
+
+.qc-horizontal {
+  display: flex;
+  height: 100rpx;
+  /*垂直居中  */
+  align-items: center;
+}
+
+.qc-horizontal-80 {
+  display: flex;
+  /*垂直居中  */
+  align-items: center;
+}
+
+.l-mg{
+  margin-left: 10rpx;
+  margin-right: 20rpx;
+}
+
+.qc-text-width{
+  width: 34rp;
+  font-size: 34rpx;
+  color: gray;
+}
+
+/* =======================第一行==============================  */
+
+.qc-container {
+  background: white;
+  border-radius: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 4px;
+  margin-bottom: 2px;
+}
+
+.qc-line-1 {
+  height:40px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.qc-row-member {
+  margin-left: 30rpx;
+  margin-right: 10rpx;
+}
+
+qc-h-50 {
+  height: 50px;
+}
+
+.qc-v-center-tail {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+}
+
+.qc-v-center {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.qc-circle {
+  border-radius: 50%;
+}
+
+.qc-avatar {
+  height: 50rpx;
+  width: 50rpx;
+  margin-right: 30rpx;
+  margin-left: 10rpx;
+}
+
+.qc-font-white {
+  color: white;
+}
+
+.qc-btn-bg-blue {
+  background: #28b6ff;
+}
+
+.qc-btn-bg-orig {
+  background: #fea92e;
+}
+
+.button-hover {
+  background: green;
+}
+
+.qc-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* =====================第二行=================== */
+
+.qc-line-2 {
+  padding: 15rpx;
+}
+
+.qc-line-2-center {
+  height: 100%;
+}
+
+.qc-img-small-container {
+  margin-right: 30rpx;
+  margin-left: 20rpx;
+}
+
+.qc-text-one {
+  font-size: 34rpx;
+}
+
+.qc-text-two {
+  font-size: 24rpx;
+  color: gray;
+}
+
+.text-common {
+  height: 20px;
+  width: 20px;
+  margin-left: 10px;
+}
+
+.text-2 {
+  font-size: 50px;
+}
+
+.qc-line-2-img {
+  margin-right: 10px;
+}
+
+.qc-small-img-container {
+  height: 30px;
+  width: 30px;
+  margin-left: 5px;
+}
+
+.qc-small-img {
+  height: 20px;
+  width: 15px;
+  border-radius: 10px;
+}
+
+/*第三行  */
+
+.qc-line-3 {
+  height: 80rpx;
+  width: 100%;
+}
+
+.qc-line-3-center-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.qc-btn-container {
+  display: flex;
+  margin-right: 10rpx;
+}
+
+.qc-line-3-text {
+  margin-left: 10rpx;
+  font-size: 25rpx;
+  color: gray;
+}
+
+.btn-big {
+  width: 100rpx;
+}
+
+.btn-big-big {
+  width: 126rpx;
+}
+.button-container{
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+   font-size: 30rpx;
+    background: white;
+  border-radius: 8px;
+  justify-content: space-between;
+}

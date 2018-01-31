@@ -1,0 +1,29 @@
+/**index.wxss**/
+
+.showOrder {
+  margin: 5px 0 5px 0;
+  background-color: #fff;
+   border-bottom: 5px solid #e8e8e8;
+}
+
+.area {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+image {
+  width: 60px;
+  height: 60px;
+}
+
+.img_icon_s {
+  width: 10px;
+  height: 15px;
+}
+
+.point {
+  width: 20px;
+  height: 15px;
+}

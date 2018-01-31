@@ -1,0 +1,105 @@
+<view class='qc-container '>
+  <!--第1行  -->
+  <view class='qc-line-2 '>
+    <view class='qc-horizontal'>
+      <view class='qc-img-small-container'>
+        <image src='/images/icons/place_start.png' class='qc-small-img '></image>
+      </view>
+      <view class='qc-overflow'>
+        <text class=' qc-text-one'>{{detail.origin}}</text>
+        <text class=' qc-text-two'>{{detail.shipper_name}}-{{detail.shipper_phone}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='line '></view>
+
+  <view class='qc-line-2 '>
+    <view class='qc-horizontal'>
+      <view class='qc-img-small-container'>
+        <image src='/images/icons/place_end.png' class='qc-small-img '></image>
+      </view>
+      <view class='qc-overflow'>
+        <text class=' qc-text-one'>{{detail.terminus}}</text>
+        <text class=' qc-text-two'>{{detail.receiver_name}}-{{detail.receiver_phone}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- ====================================第二部分==================================== -->
+
+</view>
+<view class='qc-container '>
+  <!--=================1111111  -->
+  <view class='l-mg'>
+    <!-- 图片 -->
+    <view class="qc-v-center float-left" wx:if='{{get_type=="shop"}}'>
+      <image src="/images/icons/my.png" class='qc-avatar '></image>
+    </view>
+    <view class="qc-v-center float-left" wx:else>
+      <image src="/images/icons/time.png" class='qc-avatar '></image>
+    </view>
+    <!-- 文字  -->
+    <view class=' qc-v-center float-left'>
+      <view class='qc-text-width' wx:if='{{detail.type=="shop"}}'>门店发货</view>
+      <view wx:else>
+        <view class='qc-text-width'>上门取件</view>
+      </view>
+    </view>
+    <view class=' qc-v-center float-right'>
+      <view class=''>2小时内</view>
+    </view>
+  </view>
+  <view class='line '></view>
+  <!--================22222222  -->
+  <view class='l-mg'>
+    <!-- 图片 -->
+    <view class="qc-v-center float-left">
+      <image src="/images/icons/number_select.png" class='qc-avatar '></image>
+    </view>
+    <!-- 文字  -->
+    <view class=' qc-v-center float-left'>
+      <view class='qc-text-width'>货物数量</view>
+    </view>
+    <view class=' qc-v-center float-right'>
+      <view class=''>{{detail.count}}</view>
+    </view>
+  </view>
+  <view class='line '></view>
+  <!--333333333333333333333333333333333  -->
+  <view class='l-mg'>
+    <!-- 图片 -->
+    <view class="qc-v-center float-left">
+      <image src="/images/icons/Q&A.png" class='qc-avatar '></image>
+    </view>
+    <!-- 文字  -->
+    <view class=' qc-v-center float-left'>
+      <view class='qc-text-width'>货物体积</view>
+    </view>
+    <view class=' qc-v-center float-right'>
+      <view class=''>{{detail.volume}}</view>
+    </view>
+  </view>
+  <view class='line '></view>
+  <!--4444444444444444444444444444444444444  -->
+  <view class='l-mg'>
+    <!-- 图片 -->
+    <view class="qc-v-center float-left">
+      <image src="/images/icons/remark.png" class='qc-avatar '></image>
+    </view>
+    <!-- 文字  -->
+    <view class=' qc-v-center float-left'>
+      <view class='qc-text-width'>发货备注</view>
+    </view>
+    <view class=' qc-v-center float-right'>
+      <view class=''>{{detail.description}}</view>
+    </view>
+  </view>
+</view>
+<view wx:if='{{status_waiting}}' class='button-container '>
+  <view style='display:flex;'>
+    <text>已付运费　</text>
+    <text style='color:red;'>￥{{detail.real_money}}</text>
+  </view>
+  <view style='display:flex;justify-content: flex-end;'>
+    <button size='mini' bindtap='cancel_order'>退款</button>
+  </view>
+</view>

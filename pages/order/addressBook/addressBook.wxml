@@ -1,0 +1,8 @@
+<!--pages/order/sender/sender.wxml-->
+<view class='list'>
+  <view class='list_item' wx:for='{{list}}' wx:key=' ' data-index='{{index}}' bindtap='choose_item'>
+      <text class='list_item_name'>{{item.receiver_name}}{{item.receiver_phone}}</text>
+      <text class='list_item_defaultAddress' wx:if='{{item.default=="yes"}}'>默认地址</text>
+    <view class='list_item_address'>{{item.receiver_addr}}</view>
+  </view>
+</view>
